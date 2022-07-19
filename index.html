@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="reset.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
     <script defer src="./script.js"></script>
@@ -15,16 +16,17 @@
 
 <body>
     <section>
+        <h2>Chocolate</h2>
         <div class="question" id="chocolateDataInputs">
             <p>How much money do you have?</p>
             <input type="number" name="userMoney" id="userMoney">
             <p>What's the price of a chocolate?</p>
             <input type="number" name="userPrice" id="userPrice">
-            
+
         </div>
 
         <div class="answer">
-            <p id="chocolateResult">Calculating chocolate...</p>
+            <p id="chocolateResult">Calculating chocolates...</p>
             <p id="changeResult">Your change</p>
         </div>
 
@@ -33,18 +35,64 @@
     <hr>
 
     <section>
+        <h2>Backwards numbers</h2>
         <div class="question">
-            <p>Enter your digit</p>
+            <p>Enter any digits > 0 and press Enter</p>
             <input type="number" name="userDigit" id="userDigit">
-                        
+
         </div>
 
         <div class="answer">
-            <p id="digitResult">Here you'll see your number backwards</p>
-            
+            <p>Your backwards number: <output id="digitResult"></output></p>
+
+
         </div>
 
     </section>
+
+    <hr>
+
+    <section>
+
+        <h2>Investments</h2>
+        <div class="question">
+            <p>Enter summ of investment, $</p>
+            <input type="number" name="userInvestment" id="userInvestment" placeholder="$">
+
+            <p>Select time period (months)</p>
+            <div class="range_input">
+                <input name="userMonths" id="userMonths" type="range" value="1" min="1" max="36"
+                    oninput="rangevalue.value=value" />
+                <output id="rangevalue">1</output>
+
+            </div>
+
+            <p>Select Interest rate (% per year)</p>
+            
+            
+           <div class="range_input">
+                <input name="userPersent" id="userPercent" type="range" value="1" min="1" max="20"
+                    oninput="rangenumber.value=value" />
+                <output id="rangenumber">1</output>
+           </div>
+
+
+            <div>
+                <button id="calculateIncome">Calculate income</button>
+            </div>
+
+
+
+        </div>
+
+        <div class="answer">
+            <p id="calcTotalIncome">Your total income is calculating...</p>
+
+        </div>
+
+    </section>
+
+
 
 
 </body>
