@@ -64,17 +64,17 @@ function calculateIncome(){
     const userYearPercent = parseFloat(document.querySelector('#userPercent').value);
     const userInvestment = parseFloat(document.querySelector('#userInvestment').value);
 
-    if (typeof userInvestment == "number"){
+    if (userInvestment > 0){
 
     const interestResult = userInvestment / 100 * userYearPercent / 12 * userMonths; 
 
     const incomeResult = interestResult + userInvestment;
 
-    document.querySelector('#calcTotalIncome').innerHTML = `<p>You are going to earn ${interestResult}$. Total summ is ${incomeResult} </p>`
+    document.querySelector('#calcTotalIncome').innerHTML = `<p>You are going to earn ${interestResult}$. Total sum is ${incomeResult} </p>`
 }
 
-else{
-    document.querySelector('#calcTotalIncome').innerHTML = `<p>Please, enter investment in $</p>`
+else if(isNaN(userInvestment)){
+    document.querySelector('#calcTotalIncome').innerHTML = `<p>Please, enter sum of investment, at least 1$</p>`
 
 }
 }
